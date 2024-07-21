@@ -15,8 +15,7 @@ ENV HASURA_GRAPHQL_PG_CONNECTIONS=15
 CMD graphql-engine \
     # --admin-secret $HASURA_GRAPHQL_ADMIN_SECRET
     --database-url $DATABASE_URL \
-    serve \
-    --port $PORT \
+    serve
 
 ## Comment the command above and use the command below to
 ## enable an access-key and an auth-hook
