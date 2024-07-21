@@ -12,10 +12,8 @@ ENV HASURA_GRAPHQL_PG_CONNECTIONS=15
 
 # Change $DATABASE_URL to your heroku postgres URL if you're not using
 # the primary postgres instance in your app
-CMD graphql-engine \
+CMD graphql-engine --database-url $DATABASE_URL serve
     # --admin-secret $HASURA_GRAPHQL_ADMIN_SECRET
-    --database-url $DATABASE_URL \
-    serve
 
 ## Comment the command above and use the command below to
 ## enable an access-key and an auth-hook
